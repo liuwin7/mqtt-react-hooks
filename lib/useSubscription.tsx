@@ -10,9 +10,8 @@ export default function useSubscription(
   topic: string | string[],
   options: IClientSubscribeOptions = {} as IClientSubscribeOptions,
 ): IUseSubscription {
-  const { client, connectionStatus, parserMethod } = useContext<Context>(
-    MqttContext,
-  );
+  const { client, connectionStatus, parserMethod } =
+    useContext<Context>(MqttContext);
 
   const [message, setMessage] = useState<IMessage | undefined>(undefined);
 
